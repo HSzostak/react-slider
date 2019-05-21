@@ -1,21 +1,28 @@
-import React from 'react';
-import styled from 'styled-components';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-import Handler from './Handler';
-import Track from './Track';
+function RangeSlider(props) {
+  const [inputValue, setInputValue] = useState(props.initialValue);
 
-const Wrapper = styled.div`
-  position: relative;
-  width: 100%;
-`;
+  const onChange = (e) => {
+    setInputValue(e.target.value)
+  }
 
-function RangeSlider() {
   return (
-    <Wrapper>
-      <Handler />
-      <Track />
-    </Wrapper>
+    <div>
+      <input
+        type="range"
+        min={props.minValue}
+        max={props.maxValue}
+        step={props.step}
+        value={inputValue}
+        onChange={onChange}
+        data-orientation="horizontal"
+      />
+
+
+      <h1>{inputValue}</h1>
+    </div>
   );
 }
 
@@ -29,8 +36,8 @@ RangeSlider.propTypes = {
 
 RangeSlider.defaultProps = {
   initialValue: 0,
-  minValue: 0,
-  maxValue: 500,
+  minValue: 198,
+  maxValue: 1000,
   step: 1,
   disabled: false,
 }
