@@ -11,16 +11,9 @@ const Wrapper = styled.div`
 `;
 
 function RangeSlider() {
-
-  const onHandleUpdate = value => {
-    console.log(value);
-  }
-
   return (
     <Wrapper>
-      <Handler
-        onUpdate={onHandleUpdate}
-      />
+      <Handler />
       <Track />
     </Wrapper>
   );
