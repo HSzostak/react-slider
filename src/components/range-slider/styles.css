@@ -1,0 +1,23 @@
+.slider {
+  --trackWidth: 100%;
+  --thumbDimension: 1.438em;
+  --distance: calc(100% - 1.438em);
+  --trackColor: #ebebeb;
+  --fillColor: #85ba38;
+  --range: calc(var(--max) - var(--min));
+  --ratio: calc((var(--val) - var(--min))/var(--range));
+  --sx: calc(.5*var(--thumbDimension) + var(--ratio) * (100% - var(--thumbDimension)));
+}
+
+.slider .slider--tooltip {
+  --test: calc( var(--ratio) * 1% );
+
+  font-size: ;
+
+  transform: translate( calc( var(--ratio) * 100px ) );
+  /* translate( * var(--distance) - 50% ) ); */
+}
+
+.slider .slider--input::-webkit-slider-runnable-track {
+  background: linear-gradient(var(--fillColor), var(--fillColor)) 0/ var(--sx) 100% no-repeat var(--trackColor);
+}
