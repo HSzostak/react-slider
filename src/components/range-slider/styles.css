@@ -1,6 +1,6 @@
 .slider {
   --trackWidth: 100%;
-  --thumbDimension: 1.438em;
+  --thumbDimension: 32px;
   --distance: calc(100% - 1.438em);
   --trackColor: #ebebeb;
   --fillColor: #85ba38;
@@ -10,11 +10,7 @@
 }
 
 .slider .slider--tooltip {
-  --test: calc( var(--ratio) * 1% );
-
-  font-size: ;
-
-  transform: translate( calc( var(--ratio) * 100px ) );
+  transform: translate( var(--sx) );
   /* translate( * var(--distance) - 50% ) ); */
 }
 
