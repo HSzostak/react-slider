@@ -80,8 +80,8 @@ RangeSlider.propTypes = {
 RangeSlider.defaultProps = {
   initialValue: 198,
   minValue: 198,
-  maxValue: 1000,
-  step: 100,
+  maxValue: 11327,
+  step: 1,
   disabled: false,
 }
 
