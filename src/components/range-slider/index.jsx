@@ -3,10 +3,11 @@ import PropTypes from 'prop-types';
 import './styles.css';
 
 import {
+  CustomButton,
+  Container,
   SliderWrapper,
   SliderTooltip,
   Slider,
-  CustomButton
 } from './styles';
 
 function RangeSlider(props) {
@@ -45,18 +46,20 @@ function RangeSlider(props) {
         <span>Diminuir valor</span>
       </CustomButton>
 
-      <Slider
-        type="range"
-        min={props.minValue}
-        max={props.maxValue}
-        step={props.step}
-        value={inputValue}
-        onChange={onChange}
-        data-orientation="horizontal"
-        className="slider--input"
-      />
+      <Container>
+        <Slider
+          type="range"
+          min={props.minValue}
+          max={props.maxValue}
+          step={props.step}
+          value={inputValue}
+          onChange={onChange}
+          data-orientation="horizontal"
+          className="slider--input"
+        />
 
-      <SliderTooltip className="slider--tooltip">{inputValue}</SliderTooltip>
+        <SliderTooltip className="slider--tooltip">{inputValue}</SliderTooltip>
+      </Container>
 
       <CustomButton
         onMouseDown={() => handleButtonPress()}

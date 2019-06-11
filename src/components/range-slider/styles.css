@@ -10,7 +10,7 @@
 }
 
 .slider .slider--tooltip {
-  transform: translate( var(--sx) );
+  left: var(--sx);
   /* translate( * var(--distance) - 50% ) ); */
 }
 

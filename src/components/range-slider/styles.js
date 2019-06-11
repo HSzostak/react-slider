@@ -45,7 +45,7 @@ export const Slider = styled.input`
     outline: 0;
   }
 
-  margin: 0 8px;
+  margin: 0;
   padding: 0;
   width: ${trackWidth};
   height: ${thumbDimension};
@@ -74,6 +74,12 @@ export const Slider = styled.input`
   &::-ms-tooltip { display: none }
 `;
 
+export const Container = styled.div`
+  flex: 1;
+  position: relative;
+  margin: 0 8px;
+`;
+
 export const SliderWrapper = styled.div`
   display: flex;
   position: relative;
@@ -84,6 +90,7 @@ export const SliderWrapper = styled.div`
 
 export const SliderTooltip = styled.span`
   position: absolute;
+  left: 0;
   bottom: 100%;
   margin-bottom: 10px;
   font-size: 14px;
@@ -93,6 +100,8 @@ export const SliderTooltip = styled.span`
   border-radius: 4px;
   transition: opacity .2s ease;
   opacity: 1;
+
+  transform: translate( -50% );
 
   &:empty {
     opacity: 0;
